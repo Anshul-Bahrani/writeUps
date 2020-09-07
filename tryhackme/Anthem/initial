@@ -1,0 +1,37 @@
+# Nmap 7.80 scan initiated Mon Sep  7 09:04:40 2020 as: nmap -sC -sV -o initial 10.10.171.9
+Nmap scan report for 10.10.171.9
+Host is up (0.14s latency).
+Not shown: 995 closed ports
+PORT     STATE SERVICE       VERSION
+80/tcp   open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+| http-robots.txt: 4 disallowed entries 
+|_/bin/ /config/ /umbraco/ /umbraco_client/
+|_http-title: Anthem.com - Welcome to our blog
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds?
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+| rdp-ntlm-info: 
+|   Target_Name: WIN-LU09299160F
+|   NetBIOS_Domain_Name: WIN-LU09299160F
+|   NetBIOS_Computer_Name: WIN-LU09299160F
+|   DNS_Domain_Name: WIN-LU09299160F
+|   DNS_Computer_Name: WIN-LU09299160F
+|   Product_Version: 10.0.17763
+|_  System_Time: 2020-09-07T13:05:19+00:00
+| ssl-cert: Subject: commonName=WIN-LU09299160F
+| Not valid before: 2020-09-06T12:32:51
+|_Not valid after:  2021-03-08T12:32:51
+|_ssl-date: 2020-09-07T13:05:28+00:00; 0s from scanner time.
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2020-09-07T13:05:23
+|_  start_date: N/A
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Sep  7 09:05:29 2020 -- 1 IP address (1 host up) scanned in 48.23 seconds

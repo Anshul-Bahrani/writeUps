@@ -1,0 +1,14 @@
+# Nmap 7.80 scan initiated Sat Jul 25 04:09:47 2020 as: nmap -sC -sV -oN tryhackme/golden_eye/initial 10.10.75.212
+Nmap scan report for 10.10.75.212
+Host is up (0.15s latency).
+Not shown: 998 closed ports
+PORT   STATE SERVICE VERSION
+25/tcp open  smtp    Postfix smtpd
+|_smtp-commands: ubuntu, PIPELINING, SIZE 10240000, VRFY, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN, 
+|_ssl-date: TLS randomness does not represent time
+80/tcp open  http    Apache httpd 2.4.7 ((Ubuntu))
+|_http-server-header: Apache/2.4.7 (Ubuntu)
+|_http-title: GoldenEye Primary Admin Server
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Jul 25 04:10:43 2020 -- 1 IP address (1 host up) scanned in 55.73 seconds

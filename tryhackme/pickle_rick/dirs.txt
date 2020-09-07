@@ -1,0 +1,7 @@
+// (Status: 200)
+//.html (Status: 403)
+//.php (Status: 403)
+/assets (Status: 301)
+/index.html (Status: 200)
+/login.php (Status: 200)
+/portal.php (Status: 302)
