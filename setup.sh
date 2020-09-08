@@ -4,4 +4,5 @@ curl -fsSL https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add
 sudo add-apt-repository "deb https://download.sublimetext.com/ apt/stable/"
 sudo apt update
 sudo apt install sublime-text
-
+git config user.email "anshulbahrania@gmail.com"
+git config user.name "Anshul-Bahrani"
