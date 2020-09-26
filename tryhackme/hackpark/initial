@@ -1,0 +1,7 @@
+# Nmap 7.80 scan initiated Tue Sep 22 15:38:06 2020 as: nmap -sC -sV -Pn -oN hackpark/initial 10.10.55.208
+Nmap scan report for 10.10.55.208
+Host is up.
+All 1000 scanned ports on 10.10.55.208 are filtered
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Sep 22 15:41:28 2020 -- 1 IP address (1 host up) scanned in 202.18 seconds
