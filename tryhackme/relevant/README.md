@@ -1,6 +1,6 @@
 ### Relevant ###
 
-export IP=10.10.30.250
+export IP=10.10.137.137
 
 # Http-TRACE
 nmap showed that http-trace method was enabled..so tried that but no luck there...
