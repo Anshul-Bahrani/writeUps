@@ -1,0 +1,13 @@
+### TomGhost ###
+
+export IP=10.10.119.31
+
+
+No webserver on 80....nmap showed a web server on 8080....
+
+its a defualt webpage for apache tomcat...
+
+found /docs through gobuster...
+Version 9.0.30, Dec 7 2019
+
+looking on exploit-db...
