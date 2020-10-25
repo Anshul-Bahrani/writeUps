@@ -1,0 +1,5 @@
+Using default input encoding: UTF-8
+Loaded 1 password hash (PKZIP [32/64])
+Will run 6 OpenMP threads
+Proceeding with single, rules:Single
+Crash recovery file is locked: /root/.john/john.rec
