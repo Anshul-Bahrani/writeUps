@@ -1,0 +1,21 @@
+# Nmap 7.91 scan initiated Wed Feb 17 02:38:08 2021 as: nmap -sC -sV -oN nmap/initial 10.10.247.60
+Nmap scan report for 10.10.247.60
+Host is up (0.16s latency).
+Not shown: 998 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh?
+| fingerprint-strings: 
+|   GenericLines: 
+|_    iI^+:V'_}$<F?YL3@!~.5k|F!f
+|_ssh-hostkey: ERROR: Script execution failed (use -d to debug)
+80/tcp open  http    nginx 1.19.6
+| http-robots.txt: 3 disallowed entries 
+|_/api/ /exif-util /*.bak.txt$
+|_http-server-header: nginx/1.19.6
+|_http-title: docker-escape-nuxt
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port22-TCP:V=7.91%I=7%D=2/17%Time=602C3460%P=x86_64-pc-linux-gnu%r(Gene
+SF:ricLines,1C,"iI\^\+:V'_}\$<F\?YL3@!~\.5k\|F!f\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Feb 17 02:41:49 2021 -- 1 IP address (1 host up) scanned in 221.25 seconds
