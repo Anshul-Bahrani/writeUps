@@ -1,43 +1,41 @@
 #!/usr/bin/env python3
 
-from pwn import xor
+from PIL import Image
 
-r = open("lemur.png", "rb")
+flag = Image.open("flag.png", "r")
 
-img1 = bytearray(r.read())
-r.close()
-#print(img1)
-pngHeader = img1[:8]
+flagHeight, flagWidth = flag.size
 
-for ind in range(8):
-	print(img1[ind])
+# print(flagHeight, flagWidth)
 
-img1 = img1[8:]
-print(len(img1))
+lemur = Image.open("lemur.png", "r")
 
-potentialKey = "crypto"
+lemurHeight, lemurWidth = lemur.size
 
+# print(lemurHeight, lemurWidth)
 
+flagPixels = list(flag.getdata())
+lemurPixels = list(lemur.getdata())
+# print(flagPixels)
 
+answer = Image.open("answer.png")
 
-print("---------------")
-t = open("test.png", "rb")
-txt = bytearray(t.read())
-t.close()
-for elem in range(8):
-	print(txt[elem])
+answerPixels = list(answer.getdata())
 
-img2 = open("flag.png", "rb")
+# print(len(answerPixels), flagPixels[0])
 
-flag_txt = bytearray(img2.read())
+for ind in range(len(flagPixels)):
+	rgb = list()
+	#R
+	rgb.append(flagPixels[ind][0] ^ lemurPixels[ind][0])
+	#G
+	rgb.append(flagPixels[ind][1] ^ lemurPixels[ind][1])
+	#B
+	rgb.append(flagPixels[ind][2] ^ lemurPixels[ind][2])
+	# print(tuple(rgb))
+	answerPixels[ind] = tuple(rgb)
 
-print(len(flag_txt))
+im2 = Image.new(answer.mode, answer.size)
+im2.putdata(answerPixels)
 
-towrite = xor(img1, flag_txt)
-
-toWrite = open("test.png", "wb")
-temp = pngHeader + towrite
-print("Temp:", len(temp), temp[:8])
-toWrite.write(pngHeader)
-toWrite.write(temp)
-toWrite.close()
+im2.save("answer.png")
